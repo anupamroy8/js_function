@@ -164,6 +164,17 @@ sumOfn()
 ```js
 // your code goes here
 
+function sumOfDiv5and7() {
+  var n =  +prompt("Enter a number");
+  var result = 0;
+  for(let i = 1; i <= n; i++) {
+    if(i%7 == 0 || i%5 == 0) {
+      result = result+i;
+    }
+  }
+  alert("Summation of 5 and 7 = " + result );
+}
+sumOfDiv5and7()
 
 ```
 

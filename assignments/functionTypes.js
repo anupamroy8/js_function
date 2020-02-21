@@ -18,7 +18,7 @@ function convertToString(n) {
 }
 
 // Function Expression
-let convertToString1 = function(n) {
+let convertToString = function(n) {
   return String(n);
 };
 
@@ -43,11 +43,57 @@ convertToString(21); // "21"
  * @return {number}
  */
 
+
+// Function Declaration
+function addOne(n) {
+  return n+1;
+}
+
+//Function Expression
+let addOne = function(n) {
+  return n+1;
+};
+
+//Arrow Function
+let addOne = n => n+1;
+
+// Arrow Function With Curly Bracket
+let addOne = n => {
+  return n+1;
+};
+
+// Function Invocation
+addOne(21); // 22
+
+
 /**
  * Subtracts one from a given number.
  * @param {number} n
  * @return {number}
  */
+
+
+function subOne(n) {
+  return n-1;
+}
+
+//Function Expression
+let subOne = function(n) {
+  return n-1;
+};
+
+//Arrow Function
+let subOne = n => n-1;
+
+// Arrow Function With Curly Bracket
+let subOne = n => {
+  return n-1;
+};
+
+// Function Invocation
+
+subOne(21); // 20
+
 
 /**
  * Adds two numbers.
@@ -56,12 +102,58 @@ convertToString(21); // "21"
  * @return {number} the sum
  */
 
+
+// Function Declaration
+function add(x, y) {
+  return x+y;
+}
+
+//Function Expression
+let add = function(x, y) {
+  return x+y;
+};
+
+//Arrow Function
+let add = (x, y) => x+y;
+
+// Arrow Function With Curly Bracket
+let add = (x, y) => {
+  return x+y;
+};
+
+// Function Invocation
+
+add(5, 10); // 15
+
+
 /**
  * Subtracts the second number from the first.
  * @param {number} x
  * @param {number} y
  * @return {number} the difference
  */
+
+// Function Declaration
+function sub(x, y) {
+  return x-y;
+}
+
+//Function Expression
+let sub = function(x, y) {
+  return x-y;
+};
+
+//Arrow Function
+let sub = (x, y) => x-y;
+
+// Arrow Function With Curly Bracket
+let sub = (x, y) => {
+  return x-y;
+};
+
+// Function Invocation
+
+sub(15, 10); // 5
 
 /**
  * Multiplies two numbers.
@@ -70,6 +162,29 @@ convertToString(21); // "21"
  * @return {number} the product
  */
 
+
+// Function Declaration
+function mul(x, y) {
+  return x*y;
+}
+
+//Function Expression
+let mul = function(x, y) {
+  return x*y;
+};
+
+//Arrow Function
+let mul = (x, y) => x*y;
+
+// Arrow Function With Curly Bracket
+let mul = (x, y) => {
+  return x*y;
+};
+
+// Function Invocation
+
+mul(15, 10); // 150
+
 /**
  * Divides the first number by the second.
  * @param {number} x
@@ -77,11 +192,57 @@ convertToString(21); // "21"
  * @return {number} the quotient
  */
 
+ // Function Declaration
+function div(x, y) {
+  return x/y;
+}
+
+//Function Expression
+let div = function(x, y) {
+  return x/y;
+};
+
+//Arrow Function
+let div = (x, y) => x/y;
+
+// Arrow Function With Curly Bracket
+let div = (x, y) => {
+  return x/y;
+};
+
+// Function Invocation
+
+div(20, 10); // 2
+
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
  * @return {number} squared
  */
+
+
+// Function Declaration
+function square(x) {
+  return x**2;
+}
+
+//Function Expression
+let square = function(x) {
+  return x**2;
+};
+
+//Arrow Function
+let square = (x) => x**2;
+
+// Arrow Function With Curly Bracket
+let square = (x) => {
+  return x**2;
+};
+
+// Function Invocation
+
+square(2); // 4
+
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -92,6 +253,9 @@ convertToString(21); // "21"
  * @return {number} the result
  */
 
+ 
+
+
 /**
  * Returns true if `a` is greater than `b`.
  * @param {number} a
@@ -99,6 +263,36 @@ convertToString(21); // "21"
  * @return {boolean} `a` is larger than `b`
  */
 
+
+// Function Declaration
+function greater(a, b) {
+  if(a > b)
+    return a;
+  return b;
+}
+
+//Function Expression
+let greater = function(a, b) {
+  if(a > b)
+    return a;
+  return b;
+};
+
+//Arrow Function
+let greater = (a, b) => a>b ? a:b;
+
+// Arrow Function With Curly Bracket
+let greater = (a, b) => {
+  if(a > b);
+    return a;
+  return b;
+};
+
+// Function Invocation
+
+greater(5, 6); // 6
+
+ 
 /**
  * Returns true if `a` is less than `b`.
  * @param {number} a
@@ -106,12 +300,73 @@ convertToString(21); // "21"
  * @return {boolean} `a` is smaller than `b`
  */
 
+
+// Function Declaration
+function lessThan(a, b) {
+  if(a < b)
+    return a;
+  return b;
+}
+
+//Function Expression
+
+let lessThan = function(a, b) {
+  if(a < b)
+    return a;
+  return b;
+};
+//Arrow Function
+
+let lessThan = (a, b) => a<b ? a:b;
+
+// Arrow Function With Curly Bracket
+
+let lessThan = (a, b) => {
+  if(a < b)
+    return a;
+  return b;
+};
+// Function Invocation
+
+greater(9, 6); // 6
+
 /**
  * Returns true if `a` and `b` are equal.
  * @param {number} a
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
+
+
+function equal(a, b) {
+  if(a == b)
+    return true;
+  return false;
+}
+
+//Function Expression
+let equal = function(a, b) {
+  if(a == b)
+    return true;
+  return false;
+};
+
+//Arrow Function
+
+let equal = (a,b) => (a == b) ? true:false;
+
+
+// Arrow Function With Curly Bracket
+
+let equal = (a, b) => {
+  if(a ==b)
+    return true;
+  return false;
+}
+
+// Function Invocation
+equal(4, 4)
+true
 
 /**
  * Returns the smallest value of two numbers.
