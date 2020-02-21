@@ -253,8 +253,31 @@ square(2); // 4
  * @return {number} the result
  */
 
- 
+function calculator(operation, x, y) {
+  if(operation == "add"){
+    var n = x+y;
+    alert(` ${x} + ${y} = ${n} `);
+  }
+  else if(operation == "subtract") {
+    var n = x-y;
+    alert(` ${x} - ${y} = ${n} `);
+  }
 
+
+  else if(operation == "multiply") {
+    var n = x*y;
+    alert(` ${x} * ${y} = ${n} `);
+  }
+
+
+  else if(operation == "divide") {
+    var n = x/y;
+    alert(` ${x} / ${y} = ${n} `);
+  }
+  else {
+    alert("Wrong operation")
+  }
+}
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -375,6 +398,37 @@ true
  * @return {number} the smallest number
  */
 
+
+// Function Declaration
+
+function smaller(a, b) {
+  if(a < b)
+    return a;
+  return b;
+}
+//Function Expression
+
+let smaller = function(a, b) {
+  if(a < b)
+    return a;
+  return b;
+};
+//Arrow Function
+
+let smaller = (a,b) => (a < b) ? a:b;
+
+// Arrow Function With Curly Bracket
+
+let smaller = (a, b) => {
+  if(a < b)
+    return a;
+  return b;
+};
+
+// Function Invocation
+smaller(4, 7)
+4
+
 /**
  * Returns the largest value of two numbers.
  * @param {number} x
@@ -382,17 +436,109 @@ true
  * @return {number} the largest number
  */
 
+
+function largest(x, y) {
+  if(x > y)
+    return x;
+  return y;
+}
+
+//Function Expression
+
+let largest = function(x, y) {
+  if(x > y)
+    return x;
+  return y;
+};
+
+//Arrow Function
+
+let largest = (x, y) => x > y ? x:y;
+// Arrow Function With Curly Bracket
+
+let largest = (x, y) => {
+  if(x > y)
+    return  x;
+  return y;
+};
+
+// Function Invocation
+largest(5, 10)
+10
+
 /**
  * Returns true if `n` is even.
  * @param {number} n
  * @return {boolean} the number is even
  */
 
+
+// Function Declaration
+function even(n) {
+  if(n%2 == 0)
+    return true;
+  return false;
+}
+
+//Function Expression
+
+let even = function(n) {
+  if(n%2 == 0)
+    return true;
+  return false;
+};
+
+//Arrow Function
+
+let even = n => (n%2 == 0) ? true:false;
+// Arrow Function With Curly Bracket
+
+let even = n => {
+  if(n%2 == 0)
+    return true;
+  return false;
+};
+
+// Function Invocation
+even(6)
+true
+
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
+
+
+// Function Declaration
+function odd(n) {
+  if(n%2 != 0)
+    return true;
+  return false;
+}
+
+//Function Expression
+
+let odd = function(n) {
+  if(n%2 != 0)
+    return true;
+  return false;
+};
+
+//Arrow Function
+
+let odd = n => (n%2 != 0) ? true:false;
+// Arrow Function With Curly Bracket
+
+let odd = n => {
+  if(n%2 != 0)
+    return true;
+  return false;
+};
+
+// Function Invocation
+odd(7)
+true
 
 /**
  * Returns a letter grade.
@@ -406,9 +552,115 @@ true
  * @return {string} the score represented as a letter grade
  */
 
+
+// Function Declaration
+
+function percentageMarks(score, maxm) {
+  var per = +((score/maxm)*100);
+  switch(true) {
+    case(per >= 90):
+    alert("A");
+    break;
+    case(per >= 80):
+    alert("B");
+    break;
+    case(per >= 70):
+    alert("C");
+    break;
+    case(per >= 60):
+    alert("D");
+    break;
+    case(per < 60):
+    alert("F");
+    break;
+  }
+}
+
+//Function Expression
+
+let percentageMarks = function(score, maxm) {
+  var per = +((score/maxm)*100);
+  switch(true) {
+    case(per >= 90):
+    alert("A");
+    break;
+    case(per >= 80):
+    alert("B");
+    break;
+    case(per >= 70):
+    alert("C");
+    break;
+    case(per >= 60):
+    alert("D");
+    break;
+    case(per < 60):
+    alert("F");
+    break;
+  }
+};
+percentageMarks(90, 100)
+//Arrow Function
+
+//NA
+
+// Arrow Function With Curly Bracket
+
+let percentageMarks = (score, maxm) => {
+  var per = +((score/maxm)*100);
+  switch(true) {
+    case(per >= 90):
+    alert("A");
+    break;
+    case(per >= 80):
+    alert("B");
+    break;
+    case(per >= 70):
+    alert("C");
+    break;
+    case(per >= 60):
+    alert("D");
+    break;
+    case(per < 60):
+    alert("F");
+    break;
+  }
+}
+percentageMarks(90, 100)
+
+// Function Invocation
+percentageMarks(90, 100)
+A
+
+
 /**
  * Joins two strings with a space.
  * @param {string} word1
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+
+// Function Declaration
+
+function stringJoin(word1, word2) {
+  return (word1 + " " + word2);
+}
+
+//Function Expression
+
+let stringJoin = function(word1, word2) {
+  return (word1 + " " + word2);
+};
+
+//Arrow Function
+
+let stringJoin = (word1, word2) => (word1 + " " + word2); ;
+
+// Arrow Function With Curly Bracket
+
+let stringJoin = (word1, word2) => {
+  return (word1 + " " + word2);
+};
+
+// Function Invocation
+stringJoin("abc", "def")
+"abc def"
